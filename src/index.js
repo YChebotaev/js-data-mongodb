@@ -200,7 +200,7 @@ export function MongoDBAdapter (opts) {
       if (err) {
         return reject(err)
       }
-      this._db = db
+      _this._db = db.db(db.s.options.dbName)
       resolve(db)
     })
   })
